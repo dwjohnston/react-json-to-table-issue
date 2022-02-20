@@ -1,46 +1,36 @@
-# Getting Started with Create React App
+Reproduces an issue with react-scripts@5 and react-json-to-table 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Instructions: 
 
-In the project directory, you can run:
+```
+yarn
+yarn start
 
-### `npm start`
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In the terminal you will get this warning/error
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+```
+WARNING in ./node_modules/react-json-to-table/build/lib/components/JsonToTable/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/djohnston/git/repros/json-to-table-issue/node_modules/react-json-to-table/src/components/JsonToTable/index.ts' file: Error: ENOENT: no such file or directory, open '/home/djohnston/git/repros/json-to-table-issue/node_modules/react-json-to-table/src/components/JsonToTable/index.ts'
+ @ ./node_modules/react-json-to-table/build/lib/components/index.js 10:20-44
+ @ ./src/App.tsx 7:0-50 35:37-48
+ @ ./src/index.tsx 7:0-24 11:33-36
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+WARNING in ./node_modules/react-json-to-table/build/lib/components/index.js
+Module Warning (from ./node_modules/source-map-loader/dist/cjs.js):
+Failed to parse source map from '/home/djohnston/git/repros/json-to-table-issue/node_modules/react-json-to-table/src/components/index.tsx' file: Error: ENOENT: no such file or directory, open '/home/djohnston/git/repros/json-to-table-issue/node_modules/react-json-to-table/src/components/index.tsx'
+ @ ./src/App.tsx 7:0-50 35:37-48
+ @ ./src/index.tsx 7:0-24 11:33-36
 
-### `npm run build`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The applicaiton seems to work fine though, and it builds fine. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
